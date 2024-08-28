@@ -1,28 +1,37 @@
-import "./main_page.css";
+import "./styles/globals.css";
+import "./styles/main_page.css";
 import * as images from "../app/images.js";
 import Image from 'next/image';
 import Link from 'next/link';
+import Slider from "../app/components/slider.js";
+import Store from "../app/components/buy_vix.js";
 
 export default function Home() {
   return (
     <>
       <header className="mt-5">
-        <nav className="text-2xl font-bold justify-between px-10 pt-10">
-          <ul className="flex gap-2 justify-between">
-            <li><Link href={""} >Главная</Link></li>
-            <li><Link href={""} >Правила</Link></li>
-            <li>
-              <div className="flex gap-2">
-                <Image src={images.tg_icon} />
-                <Image src={images.vk_icon} />
-                <Image src={images.ds_icon} />
-              </div>
-            </li>
-            <li><Link href={""} className="profile align-middle" >Профиль</Link></li>
-          </ul>
+        <nav className="text-2xl font-bold pt-7">
+        <ul className="flex gap-2 justify-content: space-between items-center">
+          <li className="flex gap-16 ml-48">
+            <Link href={""} className="" >главная</Link>
+            <Link href={""} className="" >правила</Link>
+          </li>
+          <li className="flex gap-5 ml-auto">
+            <div className="flex gap-5 mr-11">
+              <button><Image src={images.theme} alt=""/></button>
+              <Image src={images.tg_icon} />
+              <Image src={images.ds_icon} />
+              <Image src={images.vk_icon} />
+            </div>
+            <Link href={""} className="profile align-middle mr-5" >профиль</Link>
+          </li>
+        </ul>
         </nav>
       </header>
-      <main></main>
+      <main>
+        <Slider/>
+        <Store/>
+      </main>
       <footer>
         <p>все права защищены</p>
       </footer>
