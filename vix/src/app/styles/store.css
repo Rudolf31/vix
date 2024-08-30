@@ -4,3 +4,20 @@
     background-size: 100% 100%; 
     background-position: top;
   } */
+
+  .input-box {
+    border: solid 2px transparent;
+    border-radius: 13px;
+    letter-spacing: 5px;
+    background:
+        linear-gradient( black, black) padding-box,
+        linear-gradient( to bottom right, #83EEFF, #3A0184) border-box;
+}
+  
+  .input-box:focus {
+    outline: none;
+  }
+
+  .scrollbar {
+    width: 300px;
+  }
