@@ -25,9 +25,9 @@ export default function Store() {
   return (
     <>
       <h2 className="text-4xl text-left ml-5 mb-4">Купить виксы </h2>
-      <div className="store flex">
+      <div className="store flex items-center gap-24">
         <input
-          className="input-box bg-black px-1 py-1 text-4xl text-right font-bold pl-16 mr-20"
+          className="input-box bg-black px-2 py-1 text-4xl text-right font-bold pl-14"
           type="number"
           step="1"
           min="1"
@@ -48,6 +48,7 @@ export default function Store() {
           onChange={handleChange}
           className="scrollbar"
         />
+        <button className="btn-buy text-4xl font-bold">купить</button>
       </div>
     </>
   );

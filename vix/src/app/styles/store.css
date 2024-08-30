@@ -21,11 +21,53 @@
   .scrollbar {
     width: 300px;
     appearance: none;
-    height: 3px;
+    height: 10px;
     border-radius: 5px;
-    background: #3A0184;
+    background: #FFFFFF;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    overflow: hidden;
+    border: #3A0184 2px solid;
+    box-shadow: #83EEFF 0px 0px 5px 1px;
+  }
+  
+  .scrollbar:hover {
+    opacity: 1;
+}
+
+.scrollbar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 10px;
+    background-color: #4d00b1;
+    border-radius: 15px;
+    border:#1a003c 1px solid;
+    cursor: pointer;
+    box-shadow: -200px 0 0 189px #3A0184;
+    overflow: visible;
+  }
+
+.scrollbar::-moz-range-thumb {
+    appearance: none;
+    width: 15px;
+    height: 10px;
+    background-color: #4d00b1;
+    border-radius: 15px;
+    border:#1a003c 1px solid;
+    cursor: pointer;
+    box-shadow: -200px 0 0 189px #3A0184;
+    overflow: visible;
+}
+
+.btn-buy {
+  background-color: #3A0184;
+  color: white;
+  border-radius: 13px;
+  border: 0;
+  padding: 1px 15px 11px 20px;
+  letter-spacing: 5px;
+  font-size: 32px;
+  box-shadow: #83EEFF 0px 0px 15px 2px;
 }
