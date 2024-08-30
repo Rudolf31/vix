@@ -20,4 +20,12 @@
 
   .scrollbar {
     width: 300px;
-  }
+    appearance: none;
+    height: 3px;
+    border-radius: 5px;
+    background: #3A0184;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
