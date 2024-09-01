@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
+  background-color: #1A1A18;
   color: white;
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
   font-family: "Jura", sans-serif;
+}
+
+main {
+  margin-bottom: 7%;
 }
 
 @layer utilities {

@@ -1,0 +1,20 @@
+.pop_up_buy {
+    border: 2px solid transparent;
+    background-image: linear-gradient(#1A1A18, #1A1A18),
+    linear-gradient( to right bottom, #83EEFF, #3A0184); 
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 13px ;
+}
+
+.pop_up_buy input {
+    background-color: #1A1A18;
+    border: #ffffff7b 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+
+.pop_up_buy button {
+    letter-spacing: 5px;
+}

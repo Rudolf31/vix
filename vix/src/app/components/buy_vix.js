@@ -1,6 +1,8 @@
 "use client";
 import "../styles/store.css";
 import { useState } from "react";
+import Image from "next/image";
+import * as img from "../images.js";
 
 export default function Store() {
   const [amount, setAmount] = useState(10);
@@ -22,12 +24,17 @@ export default function Store() {
     }
   };
 
+  
+
   return (
-    <>
-      <h2 className="text-4xl text-left ml-5 mb-4">Купить виксы </h2>
+    <div>
+      <h2 className="text-4xl text-left ml-5">Купить виксы </h2>
+      <div className="relative mt-8 div_wide_band">
+        <Image src={img.wide_band} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} className="wide_band" />
+      </div>
       <div className="store flex items-center gap-24">
         <input
-          className="input-box bg-black px-2 py-1 text-4xl text-right font-bold pl-14"
+          className="input-box px-2 py-1 text-4xl text-right font-bold pl-14"
           type="number"
           step="1"
           min="1"
@@ -50,6 +57,6 @@ export default function Store() {
         />
         <button className="btn-buy text-4xl font-bold">купить</button>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,16 +1,21 @@
-/* .store {
-    background-image: url("../../../public/wide_band.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%; 
-    background-position: top;
-  } */
+.div_wide_band {
+  margin-bottom: 10%;
+}
 
-  .input-box {
+.wide_band {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-box {
     border: solid 2px transparent;
     border-radius: 13px;
     letter-spacing: 5px;
     background:
-        linear-gradient( black, black) padding-box,
+        linear-gradient( #1A1A18, #1A1A18) padding-box,
         linear-gradient( to bottom right, #83EEFF, #3A0184) border-box;
 }
   
@@ -39,9 +44,9 @@
 
 .scrollbar::-webkit-slider-thumb {
     appearance: none;
-    width: 15px;
+    width: 17px;
     height: 10px;
-    background-color: #4d00b1;
+    background-color: #83EEFF;
     border-radius: 15px;
     border:#1a003c 1px solid;
     cursor: pointer;
@@ -50,15 +55,15 @@
   }
 
 .scrollbar::-moz-range-thumb {
-    appearance: none;
-    width: 15px;
-    height: 10px;
-    background-color: #4d00b1;
-    border-radius: 15px;
-    border:#1a003c 1px solid;
-    cursor: pointer;
-    box-shadow: -200px 0 0 189px #3A0184;
-    overflow: visible;
+  appearance: none;
+  width: 17px;
+  height: 10px;
+  background-color: #83EEFF;
+  border-radius: 15px;
+  border:#1a003c 1px solid;
+  cursor: pointer;
+  box-shadow: -200px 0 0 189px #3A0184;
+  overflow: visible;
 }
 
 .btn-buy {
@@ -70,4 +75,24 @@
   letter-spacing: 5px;
   font-size: 32px;
   box-shadow: #83EEFF 0px 0px 15px 2px;
+  transition: 0.5s;
 }
+
+.btn-buy:hover {
+  background-color: #4d00b1;
+  box-shadow: #9bf2ff 0px 0px 20px 3px;
+}
+
+.btn-buy:active {
+  background-color: #1b003d;
+  box-shadow: #83EEFF 0px 0px 15px 2px;
+  transition: 0.1s;
+}
+
+/* .narrowo_band {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
