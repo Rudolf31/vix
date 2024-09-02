@@ -1,12 +1,21 @@
-.pop_up_buy {
+
+
+.pop_up_buy_conteiner {
     border: 2px solid transparent;
     background-image: linear-gradient(#1A1A18, #1A1A18),
-    linear-gradient( to right bottom, #83EEFF, #3A0184); 
+    linear-gradient( to right, #83EEFF, #3A0184); 
     background-origin: border-box;
     background-clip: padding-box, border-box;
-    border-radius: 13px ;
+    border-radius: 18px ;
 }
 
+.pop_up_buy {
+    letter-spacing: 5px;
+    background-image: url("../../../public/background_button.svg");
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
 .pop_up_buy input {
     background-color: #1A1A18;
     border: #ffffff7b 1px solid;
@@ -15,6 +24,9 @@
     letter-spacing: 3px;
 }
 
-.pop_up_buy button {
-    letter-spacing: 5px;
+.pup_up_buy_button {
+    width: 100%;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 7px;
 }

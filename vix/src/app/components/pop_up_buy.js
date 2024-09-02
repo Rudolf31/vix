@@ -7,8 +7,8 @@ export default function PopUpBuy() {
     const [payment_method, serPayment_method] = useState(true);
 
     return (
-        <>
-            <div className="pop_up_buy w-96 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2">
+        <div className="pop_up_buy_conteiner absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96">
+            <div className="pop_up_buy   p-2">
                 <div className="flex justify-end mb-8">
                     <button className=""><Image src={img.close_button}/> </button>
                 </div>
@@ -26,11 +26,17 @@ export default function PopUpBuy() {
                 }
                 {payment_method
                 ?
-                <button className="text-3xl font-bold">Далее</button>
+                <button className="pup_up_buy_button text-3xl font-bold" onClick={() => {
+                    if (document.querySelector('input[required]').value !== '') {
+                      serPayment_method(false);
+                    } else {
+                      alert('Пожалуйста, заполните обязательные поля');
+                    }
+                  }}>Далее</button>
                 :
-                <button className="text-3xl font-bold">Оплатить</button>
+                <button className="pup_up_buy_button text-3xl font-bold">Оплатить</button>
                 }
             </div>
-        </>
+        </div>
     );
 }
