@@ -1,3 +1,30 @@
+.photo_nav {
+    width: 36px;
+    height: 36px;
+    transition: 0.2s;
+    
+
+}
+.photo_nav_ds {
+    background-image: url('./../../../public/ds_icon.svg');
+}
+.photo_nav_tg {
+    background-image: url('./../../../public/tg_icon.svg');  
+}
+.photo_nav_vk {
+    background-image: url('./../../../public/vk_icon.svg');
+}
+
+.photo_nav_ds:hover {
+    background-image: url('./../../../public/ds_icon_hover.svg');
+}
+.photo_nav_tg:hover {
+    background-image: url('./../../../public/tg_icon_hover.svg');  
+}
+.photo_nav_vk:hover {
+    background-image: url('./../../../public/vk_icon_hover.svg');
+}
+
 .active {
     position: relative; /* Устанавливаем позицию для родительского элемента */
     text-decoration: none; /* Убираем стандартное подчеркивание */

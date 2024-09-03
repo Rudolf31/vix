@@ -29,12 +29,12 @@ export default function Navigation() {
                     <Link href="/rules" className={currentPath === '/rules' ? 'active' : ''}>правила</Link>
                 </li>
                 <li className="flex gap-5 ml-auto">
-                    <div className="flex gap-5 mr-11">
-                        <button><Image src={images.theme} alt=""/></button>
-                        <Image src={images.tg_icon} />
-                        <Image src={images.ds_icon} />
-                        <Image src={images.vk_icon} />
-                    </div>
+                <div className="flex gap-5 mr-11" style={{ alignItems: 'center' }}>
+                    <button><Image src={images.theme} alt=""/></button>
+                    <Link href={""} className='photo_nav photo_nav_tg'></Link>
+                    <Link href={""} className='photo_nav photo_nav_ds'></Link>
+                    <Link href={""} className='photo_nav photo_nav_vk'></Link>
+                </div>
                     <Link href={""} className="profile align-middle mr-5">профиль</Link>
                 </li>
             </ul>
