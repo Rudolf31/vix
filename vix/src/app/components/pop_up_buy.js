@@ -3,14 +3,20 @@ import "../styles/pop_up_buy.css";
 import { useState } from "react";
 import Image from "next/image";
 import * as img from "../images.js";
+import usePopUpStore from "@/stores/pop_up_store";
+
 export default function PopUpBuy() {
     const [payment_method, serPayment_method] = useState(true);
+    const { isPopupOpen, closePopup } = usePopUpStore();
+
+
+    if (!isPopupOpen) return null;
 
     return (
         <div className="pop_up_buy_conteiner absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96">
             <div className="pop_up_buy   p-2">
                 <div className="flex justify-end mb-8">
-                    <button className=""><Image src={img.close_button}/> </button>
+                    <button className="" ><Image src={img.close_button} alt="Кнопка закрытия" onClick={closePopup} /> </button>
                 </div>
                 {payment_method 
                 ?

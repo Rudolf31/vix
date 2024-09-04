@@ -30,7 +30,7 @@ export default function Navigation() {
                 </li>
                 <li className="flex gap-5 ml-auto">
                 <div className="flex gap-5 mr-11" style={{ alignItems: 'center' }}>
-                    <button><Image src={images.theme} alt=""/></button>
+                    <button><Image src={images.theme}  alt=""/></button>
                     <Link href={""} className='photo_nav photo_nav_tg'></Link>
                     <Link href={""} className='photo_nav photo_nav_ds'></Link>
                     <Link href={""} className='photo_nav photo_nav_vk'></Link>

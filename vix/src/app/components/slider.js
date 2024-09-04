@@ -53,14 +53,12 @@ export default function ImageSlider() {
         <Image
           src={images[currentIndex].src}
           alt={`Slider Image ${currentIndex + 1}`}
-          layout="responsive"
-          objectFit="contain"
           className="transition-all duration-500 ease-in-out"
         />
       </div>
       <div className="flex gap-7 justify-end mt-6">
-        <button><Image src={img.prev_slide} alt="" onClick={prevSlide}/></button>
-        <button><Image src={img.next_slide} alt="" onClick={nextSlide}/></button>
+        <button><Image src={img.prev_slide} alt=""  onClick={prevSlide}/></button>
+        <button><Image src={img.next_slide} alt=""  onClick={nextSlide}/></button>
       </div>
     </div>
   );

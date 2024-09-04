@@ -20,7 +20,7 @@ export default function Home() {
         <Store/>
       </main>
       <footer>
-        <div className="relative"><Image src={images.narrow_band} className="narrowo_band" style={{ width: '100%', height: 'auto', objectFit: 'cover' }}/></div>
+        <div className="relative"><Image src={images.narrow_band} alt="" className="narrowo_band" style={{ width: '100%', height: 'auto' }}/></div>
         <p className="">все права защищены</p>
       </footer>
       <PopUpBuy/>

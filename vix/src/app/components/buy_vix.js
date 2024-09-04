@@ -3,10 +3,13 @@ import "../styles/store.css";
 import { useState } from "react";
 import Image from "next/image";
 import * as img from "../images.js";
+import usePopUpStore from "@/stores/pop_up_store";
 
 export default function Store() {
   const [amount, setAmount] = useState(10);
   const [price, setPrice] = useState(10);
+  const { openPopup } = usePopUpStore();
+
 
   const max = 5000;
 
@@ -30,7 +33,7 @@ export default function Store() {
     <div>
       <h2 className="text-4xl text-left ml-5">Купить виксы </h2>
       <div className="relative mt-8 div_wide_band">
-        <Image src={img.wide_band} style={{ width: '100%', height: 'auto', objectFit: 'cover' }} className="wide_band" />
+        <Image src={img.wide_band} alt="" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} className="wide_band" />
       </div>
       <div className="store flex items-center gap-24">
         <input
@@ -55,7 +58,7 @@ export default function Store() {
           onChange={handleChange}
           className="scrollbar"
         />
-        <button className="btn-buy text-4xl font-bold">купить</button>
+        <button className="btn-buy text-4xl font-bold" onClick={openPopup} >купить</button>
       </div>
     </div>
   );
