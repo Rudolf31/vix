@@ -4,11 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import * as img from "../images.js";
 import usePopUpStore from "@/stores/pop_up_store";
+import useAuthStore from '@/stores/auth_store.js';
 
 export default function Store() {
   const [amount, setAmount] = useState(10);
   const [price, setPrice] = useState(10);
   const { openPopup } = usePopUpStore();
+  const { userAuth } = useAuthStore();
 
 
   const max = 5000;
@@ -58,7 +60,13 @@ export default function Store() {
           onChange={handleChange}
           className="scrollbar"
         />
-        <button className="btn-buy text-4xl font-bold" onClick={openPopup} >купить</button>
+        <button className="btn-buy text-4xl font-bold" onClick={() => {
+          if (userAuth) {
+            openPopup();
+          } else {
+            alert('Вы должны быть авторизованы, чтобы купить виксы');
+          }
+        }}>купить</button>
       </div>
     </div>
   );

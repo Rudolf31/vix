@@ -3,12 +3,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import * as images from './../images.js';
 import { useEffect, useState } from 'react';
+import  useAuthStore  from "@/stores/auth_store.js";
+import usePopUpStore  from "@/stores/pop_up_store.js";
+
+ 
 
 import "./../styles/navigation.css";
 
 export default function Navigation() {
-    const [currentPath, setCurrentPath] = useState('');
-
+    const [currentPath, setCurrentPath, ] = useState('');
+    const { userAuth, userName, setUserAuth, closeAuth, setUserName, clearUserName  } = useAuthStore();
+    const { openPopUpAuth, closePopUpAuth } = usePopUpStore();
     useEffect(() => {
 
         setCurrentPath(window.location.pathname);
@@ -30,12 +35,16 @@ export default function Navigation() {
                 </li>
                 <li className="flex gap-5 ml-auto">
                 <div className="flex gap-5 mr-11" style={{ alignItems: 'center' }}>
-                    <button><Image src={images.theme}  alt=""/></button>
+                    <button><div className='h-9 photo_nav_theme duration-100' style={{width: "65px"}}></div></button>
                     <Link href={""} className='photo_nav photo_nav_tg'></Link>
                     <Link href={""} className='photo_nav photo_nav_ds'></Link>
                     <Link href={""} className='photo_nav photo_nav_vk'></Link>
                 </div>
+                {userAuth ? (
                     <Link href={""} className="profile align-middle mr-5">профиль</Link>
+                ) : (
+                    <button href={""} onClick={openPopUpAuth}  className=" align-middle mr-5">Войти</button>
+                )}
                 </li>
             </ul>
         </nav>
