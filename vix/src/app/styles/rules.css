@@ -1,0 +1,17 @@
+.rules-list {
+    background-image: url("../../../public/line_rules.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 90px;
+}
+
+.rules-list h2 {
+    letter-spacing: 5px;
+    margin-bottom: 90px;
+}
+
+.rules-list p {
+    margin-top: 20px;
+    letter-spacing: 3px;
+    padding-left: 30px;
+}

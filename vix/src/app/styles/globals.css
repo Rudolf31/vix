@@ -47,3 +47,12 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+
+.narrowo_band {
+  min-height: 100px;
+  background-image: url("../../../public/narrow_band.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: 100% auto;
+}

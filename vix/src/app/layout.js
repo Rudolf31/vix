@@ -18,8 +18,7 @@ export default function RootLayout({ children }) {
         </header>
         {children}
         <footer>
-        <div className="relative"><Image src={images.narrow_band} alt="" className="narrowo_band" style={{ width: '100%', height: 'auto' }}/></div>
-        <p className="">все права защищены</p>
+        <div className="relative narrowo_band"><p className=" text-left pt-5">все права защищены</p></div>
         <PopUpAuth/>
       </footer>
       </body>
