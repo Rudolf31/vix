@@ -3,16 +3,18 @@ import "../styles/pop_up_buy.css";
 import Image from "next/image";
 import * as img from "../images.js";
 import usePopUpStore from "@/stores/pop_up_store";
+import useThemeStore from "@/stores/theme_store.js";
 
 export default function PopUpBuy() {
+    const { isDarkMode } = useThemeStore((state) => state);
     const { isPopupOpen, closePopup } = usePopUpStore();
 
 
     if (!isPopupOpen) return null;
 
     return (
-        <div className="pop_up_buy_conteiner absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96">
-            <form className="pop_up_buy   p-2">
+        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 ${isDarkMode ? "dark_pop_up_buy_conteiner" : "white_pop_up_buy_conteiner"}`}>
+            <form className={`pop_up_buy p-2 ${isDarkMode ? "dark_pop_up_buy" : "white_pop_up_buy"}`}>
                 <div className="flex justify-end mb-8">
                     <button className="" ><Image src={img.close_button} alt="Кнопка закрытия" onClick={() => {
                         closePopup();

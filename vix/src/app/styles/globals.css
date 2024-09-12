@@ -14,6 +14,8 @@ body {
 
 .body_white {
   background-color: white;
+  color: black;
+
 }
 
 @layer utilities {
@@ -57,6 +59,14 @@ input::-webkit-inner-spin-button {
 .narrowo_band {
   min-height: 100px;
   background-image: url("../../../public/narrow_band.svg");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: 100% auto;
+}
+.white_narrowo_band {
+  min-height: 100px;
+  background-image: url("../../../public/white_narrow_band.svg");
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;

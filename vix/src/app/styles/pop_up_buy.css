@@ -9,20 +9,6 @@
     border-radius: 18px ;
 }
 
-.pop_up_buy {
-    letter-spacing: 5px;
-    background-image: url("../../../public/background_button.svg");
-    background-position: bottom center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-.pop_up_buy input {
-    background-color: #1A1A18;
-    border: #ffffff7b 1px solid;
-    border-radius: 5px;
-    padding: 5px;
-    letter-spacing: 3px;
-}
 
 .pup_up_buy_button {
     width: 100%;

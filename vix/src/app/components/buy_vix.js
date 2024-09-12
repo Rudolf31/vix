@@ -5,12 +5,14 @@ import Image from "next/image";
 import * as img from "../images.js";
 import usePopUpStore from "@/stores/pop_up_store";
 import useAuthStore from '@/stores/auth_store.js';
+import useThemeStore from "@/stores/theme_store.js";
 
 export default function Store() {
   const [amount, setAmount] = useState(10);
   const [price, setPrice] = useState(10);
   const { openPopup } = usePopUpStore();
   const { userAuth } = useAuthStore();
+  const { isDarkMode } = useThemeStore();
 
 
   const max = 5000;
@@ -39,7 +41,7 @@ export default function Store() {
       </div>
       <div className="store flex items-center gap-24">
         <input
-          className="input-box px-2 py-1 text-4xl text-right font-bold pl-14"
+          className={"px-2 py-1 text-4xl text-right font-bold pl-14 " + (isDarkMode ? "dark_input-box" : " white_input-box")}
           type="number"
           step="1"
           min="1"
@@ -60,7 +62,7 @@ export default function Store() {
           onChange={handleChange}
           className="scrollbar"
         />
-        <button className="btn-buy text-4xl font-bold" onClick={() => {
+        <button className={"btn-buy text-4xl font-bold" + (isDarkMode ? "" : " white_btn-buy")} onClick={() => {
           if (userAuth) {
             openPopup();
           } else {

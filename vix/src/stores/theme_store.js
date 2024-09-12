@@ -2,9 +2,9 @@
 import {create} from 'zustand';
 
 const useThemeStore = create((set) => ({
-  ThemeStore: true,
-  setThemeStoreTrue: () => set({ userAuth: true }),
-  setThemeStoreFalse: () => set({ userAuth: false }),
+  isDarkMode: false,
+  setDarkModeTrue: () => set({ isDarkMode: true }),
+  setDarkModeFalse: () => set({ isDarkMode: false }),
 }));
 
 export default useThemeStore;

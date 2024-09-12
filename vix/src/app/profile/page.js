@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function Profile() {
     return (
         <main className="text-2xl text-start">
-            <div className="flex justify-between mb-12 ">
+            <div className="flex justify-between mb-12 mt-5">
                 <h2 className="nickname text-4xl font-bold" style={{letterSpacing: '3px'}}  >Ник</h2>
                 <p><span className="vix_count">456</span> Виксов</p>
             </div>

@@ -10,49 +10,58 @@
   object-fit: cover;
 }
 
-.input-box {
+.dark_input-box {
     border: solid 2px transparent;
     border-radius: 13px;
-    letter-spacing: 5px;
+    letter-spacing: 5px; 
     background:
         linear-gradient( #1A1A18, #1A1A18) padding-box,
         linear-gradient( to bottom right, #83EEFF, #3A0184) border-box;
 }
-  
-  .input-box:focus {
-    outline: none;
-  }
 
-  .scrollbar {
-    width: 300px;
-    appearance: none;
-    height: 10px;
-    border-radius: 5px;
-    background: #FFFFFF;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    overflow: hidden;
-    border: #3A0184 2px solid;
-    box-shadow: #83EEFF 0px 0px 5px 1px;
-  }
+.white_input-box {
+  border: solid 2px transparent;
+  border-radius: 13px;
+  letter-spacing: 5px; 
+  background:
+      linear-gradient( #ffffff, #ffffff) padding-box,
+      linear-gradient( to bottom right, #83EEFF, #3A0184) border-box;
+}
   
-  .scrollbar:hover {
-    opacity: 1;
+.white_input-box, .dark_input-box:focus {
+  outline: none;
+}
+
+.scrollbar {
+  width: 300px;
+  appearance: none;
+  height: 10px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  overflow: hidden;
+  border: #3A0184 2px solid;
+  box-shadow: #83EEFF 0px 0px 5px 1px;
+}
+
+.scrollbar:hover {
+  opacity: 1;
 }
 
 .scrollbar::-webkit-slider-thumb {
-    appearance: none;
-    width: 17px;
-    height: 10px;
-    background-color: #83EEFF;
-    border-radius: 15px;
-    border:#1a003c 1px solid;
-    cursor: pointer;
-    box-shadow: -200px 0 0 189px #3A0184;
-    overflow: visible;
-  }
+  appearance: none;
+  width: 17px;
+  height: 10px;
+  background-color: #83EEFF;
+  border-radius: 15px;
+  border:#1a003c 1px solid;
+  cursor: pointer;
+  box-shadow: -200px 0 0 189px #3A0184;
+  overflow: visible;
+}
 
 .scrollbar::-moz-range-thumb {
   appearance: none;
@@ -68,7 +77,6 @@
 
 .btn-buy {
   background-color: #3A0184;
-  color: white;
   border-radius: 13px;
   border: 0;
   padding: 1px 15px 11px 20px;
@@ -78,14 +86,32 @@
   transition: 0.5s;
 }
 
+.white_btn-buy {
+  background-color: #83EEFF;
+  box-shadow: #3A0184 0px 0px 15px 2px;
+}
+
+
+
 .btn-buy:hover {
   background-color: #4d00b1;
   box-shadow: #9bf2ff 0px 0px 20px 3px;
 }
 
+.white_btn-buy:hover {
+  background-color: #9bf2ff;
+  box-shadow: #3A0184 0px 0px 20px 3px;
+}
+
 .btn-buy:active {
   background-color: #1b003d;
   box-shadow: #83EEFF 0px 0px 15px 2px;
+  transition: 0.1s;
+}
+
+.white_btn-buy:active {
+  background-color: #77edff;
+  box-shadow: #3A0184 0px 0px 15px 2px;
   transition: 0.1s;
 }
 
