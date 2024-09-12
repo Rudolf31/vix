@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         </header>
         {children}
         <footer>
-        <div className="relative narrowo_band"><p className=" text-left pt-5">все права защищены</p></div>
+        <div className="relative mt-8 narrowo_band"><p className=" text-left pt-5">все права защищены</p></div>
         <PopUpAuth/>
       </footer>
       </body>

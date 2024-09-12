@@ -12,10 +12,6 @@ body {
   font-family: "Jura", sans-serif;
 }
 
-main {
-  margin-bottom: 7%;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -40,6 +36,12 @@ ul {
 li {
   list-style-type: none;
 }
+
+header {
+  background-image: url("../../../public/header.svg");
+  min-height: 138px;
+} 
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

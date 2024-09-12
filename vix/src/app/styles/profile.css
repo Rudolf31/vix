@@ -1,0 +1,37 @@
+.statistic_border {
+    background-image: url('../../../public/statistic_border.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: 100% auto;
+    min-height: 300px;
+    letter-spacing: 2px;
+}
+
+.statistic_border h3 {
+    position: relative;
+    text-align: center;
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+.statistic_border h3::before,
+.statistic_border h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 80px; /* Ширина полосы */
+    height: 2px; /* Высота полосы */
+    background-color: #ace6ff; /* Цвет полосы */
+    box-shadow: #ace6ff 0px 0px 5px 1px;
+}
+
+.statistic_border h3::before {
+    right: 20%; /* Позиция слева */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+.statistic_border h3::after {
+    left: 20%; /* Позиция справа */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+}

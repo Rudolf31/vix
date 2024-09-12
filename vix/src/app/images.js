@@ -9,5 +9,6 @@ import wide_band from "../../public/wide_band.svg";
 import narrow_band from "../../public/narrow_band.svg";
 import close_button from "../../public/close_button.svg";
 import line_rules from "../../public/line_rules.svg";
+import statistic_border from "../../public/statistic_border.svg";
 
-export { tg_icon, vk_icon, ds_icon, theme, slider_1, next_slide, prev_slide, wide_band, narrow_band, close_button, line_rules }
+export { tg_icon, vk_icon, ds_icon, theme, slider_1, next_slide, prev_slide, wide_band, narrow_band, close_button, line_rules, statistic_border }
