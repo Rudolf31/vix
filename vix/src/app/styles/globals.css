@@ -12,6 +12,10 @@ body {
   font-family: "Jura", sans-serif;
 }
 
+.body_white {
+  background-color: white;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

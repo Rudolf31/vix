@@ -3,6 +3,7 @@ import Navigation from "./components/navigation"
 import * as images from "../app/images.js";
 import Image from 'next/image';
 import PopUpAuth from "./components/pop_up_auth.js";
+import useThemeStore from "../stores/theme_store.js";
 
 export default function RootLayout({ children }) {
   return (
