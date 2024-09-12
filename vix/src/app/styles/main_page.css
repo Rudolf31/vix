@@ -6,17 +6,3 @@ header {
 
 
 
-.profile {
-    display: flex;
-    align-items: center;
-  }
-  
-.profile::after {
-    content: " ";
-    display: inline-flex;
-    background-image: url("../../../public/profile.svg");
-    background-size: 40px 47px;
-    height: 47px;
-    width: 40px;
-    margin-left: 15px;
-}
