@@ -18,7 +18,7 @@ export default function Profile() {
             </div>
             <div className=" mb-12">
                 <h2 className="text-4xl font-bold mb-7">Статистика</h2>
-                <div className="statistic_border grid grid-cols-2 gap-5">
+                <div className="statistic_border grid md:grid-cols-2 max-md:grid-cols-1 gap-5">
                     <div className="p-5">
                         <h3 className="mb-5 text-center">Хаунд</h3>
                         <div className="grid grid-cols-2 gap-5 " >

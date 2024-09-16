@@ -20,7 +20,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    width: 80px; /* Ширина полосы */
+    width: 10%; /* Ширина полосы */
     height: 2px; /* Высота полосы */
     background-color: #ace6ff; /* Цвет полосы */
     box-shadow: #ace6ff 0px 0px 5px 1px;
@@ -34,4 +34,23 @@
 .statistic_border h3::after {
     left: 20%; /* Позиция справа */
     transform: translateY(-50%); /* Центрирование по вертикали */
+}
+
+@media (max-width: 1400px) {
+    .statistic_border {
+        background-image: none;
+    }
+}
+
+@media (max-width: 769px) {
+    .statistic_border h3::before {
+        right: 0%; /* Позиция слева */
+        transform: translateY(-50%); /* Центрирование по вертикали */
+    }
+    
+    .statistic_border h3::after {
+        left: 0%; /* Позиция справа */
+        transform: translateY(-50%); /* Центрирование по вертикали */
+    }
+
 }

@@ -39,7 +39,8 @@ export default function Store() {
       <div className="relative mt-8 div_wide_band">
         <Image src={img.wide_band} alt="" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} className="wide_band" />
       </div>
-      <div className="store flex items-center gap-24">
+      <div className="store flex flex-wrap items-center md:gap-24
+      max-md:gap-8">
         <input
           className={"px-2 py-1 text-4xl text-right font-bold pl-14 " + (isDarkMode ? "dark_input-box" : " white_input-box")}
           type="number"

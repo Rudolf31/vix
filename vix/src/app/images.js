@@ -11,5 +11,6 @@ import close_button from "../../public/close_button.svg";
 import line_rules from "../../public/line_rules.svg";
 import statistic_border from "../../public/statistic_border.svg";
 import white_background_button from "../../public/white_background_button.svg";
+import menu_nav from "../../public/menu_nav.svg";
 
-export { tg_icon, vk_icon, ds_icon, theme, slider_1, next_slide, prev_slide, wide_band, narrow_band, close_button, line_rules, statistic_border, white_background_button }
+export { tg_icon, vk_icon, ds_icon, theme, slider_1, next_slide, prev_slide, wide_band, narrow_band, close_button, line_rules, statistic_border, white_background_button, menu_nav }
