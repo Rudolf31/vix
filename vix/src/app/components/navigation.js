@@ -9,25 +9,25 @@ import useThemeStore from "@/stores/theme_store.js";
 import "./../styles/navigation.css";
 
 export default function Navigation() {
-    const pathname = usePathname(); // Получите текущий путь
-    const [currentPath, setCurrentPath] = useState(pathname); // Установите начальное значение
+    const pathname = usePathname();
+    const [currentPath, setCurrentPath] = useState(pathname);
     const { userAuth } = useAuthStore((state) => state);
     const { isDarkMode, setDarkModeTrue, setDarkModeFalse } = useThemeStore((state) => state);
-    const { isPopupAuthOpen,openPopUpAuth, closePopUpAuth } = usePopUpStore((state) => state);
+    const { isPopupAuthOpen, openPopUpAuth, closePopUpAuth } = usePopUpStore((state) => state);
 
     useEffect(() => {
-        setCurrentPath(pathname); // Обновите currentPath при изменении pathname
-        console.log("Current Path:", pathname); // Проверка текущего пути
-    }, [pathname]); // Зависимость от pathname
+        setCurrentPath(pathname);
+        console.log("Current Path:", pathname); 
+    }, [pathname]); 
 
     return (
         <nav className="text-2xl font-bold pt-7 text-white">
             <ul className="grid grid-cols-2 items-center w-full">
-                <li className="flex gap-16 justify-self-center">
+                <li className="flex lg:gap-16 max-lg:gap-10 lg:justify-self-center max-lg:justify-self-start max-lg:ml-3">
                     <Link href="/" className={currentPath === '/' ? 'active' : ''}><span>главная</span></Link>
                     <Link href="/rules" className={currentPath === '/rules' ? 'active' : ''}><span>правила</span></Link>
                 </li>
-                <li className="flex gap-5 justify-self-end"> {/* Используйте justify-self-end для второй li */}
+                <li className="flex gap-5 justify-self-end">
                     <div className="flex gap-5 mr-11" style={{ alignItems: 'center' }}>
                         <button onClick={isDarkMode ? setDarkModeFalse : setDarkModeTrue}>
                             <div className={isDarkMode ? "photo_nav photo_nav_theme" : "photo_nav photo_nav_theme_white"} style={{ width: "65px" }}></div>
