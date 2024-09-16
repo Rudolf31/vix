@@ -35,7 +35,7 @@ export default function Store() {
 
   return (
     <div>
-      <h2 className="text-4xl text-left ml-5">Купить виксы </h2>
+      <h2 className="text-4xl text-left ml-5 font-bold">Купить виксы </h2>
       <div className="relative mt-8 div_wide_band">
         <Image src={img.wide_band} alt="" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} className="wide_band" />
       </div>
@@ -60,7 +60,7 @@ export default function Store() {
           id="price"
           name="price"
           onChange={handleChange}
-          className="scrollbar"
+          className="scrollbar md:block hidden"
         />
         <button className={"btn-buy text-4xl font-bold" + (isDarkMode ? "" : " white_btn-buy")} onClick={() => {
           if (userAuth) {

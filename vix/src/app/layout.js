@@ -1,8 +1,6 @@
 "use client";
 import "./styles/globals.css";
-import Navigation from "./components/navigation"
-import * as images from "../app/images.js";
-import Image from 'next/image';
+import Navigation from "./components/navigation";
 import PopUpAuth from "./components/pop_up_auth.js";
 import useThemeStore from "../stores/theme_store.js";
 
