@@ -17,7 +17,7 @@ const { isDarkMode } = useThemeStore((state) => state);
         <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet"/>
       </head>
       <body className={isDarkMode ? "" : "body_white"}>
-        <header className="mt-5">
+        <header className="">
           <Navigation/>
         </header>
         {children}

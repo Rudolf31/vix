@@ -22,14 +22,16 @@ export default function Navigation() {
 
     return (
         <nav className="text-2xl font-bold pt-7 text-white">
-            <ul className="flex gap-2 justify-content: space-between items-center">
-                <li className="flex gap-16 ml-48">
+            <ul className="grid grid-cols-2 items-center w-full">
+                <li className="flex gap-16 justify-self-center">
                     <Link href="/" className={currentPath === '/' ? 'active' : ''}><span>главная</span></Link>
                     <Link href="/rules" className={currentPath === '/rules' ? 'active' : ''}><span>правила</span></Link>
                 </li>
-                <li className="flex gap-5 ml-auto">
+                <li className="flex gap-5 justify-self-end"> {/* Используйте justify-self-end для второй li */}
                     <div className="flex gap-5 mr-11" style={{ alignItems: 'center' }}>
-                        <button onClick={isDarkMode ? setDarkModeFalse : setDarkModeTrue} ><div className={isDarkMode ? "photo_nav photo_nav_theme" : "photo_nav photo_nav_theme_white"} style={{width: "65px"}}></div></button>
+                        <button onClick={isDarkMode ? setDarkModeFalse : setDarkModeTrue}>
+                            <div className={isDarkMode ? "photo_nav photo_nav_theme" : "photo_nav photo_nav_theme_white"} style={{ width: "65px" }}></div>
+                        </button>
                         <Link href={""} className='photo_nav photo_nav_tg'></Link>
                         <Link href={""} className='photo_nav photo_nav_ds'></Link>
                         <Link href={""} className='photo_nav photo_nav_vk'></Link>
@@ -45,4 +47,5 @@ export default function Navigation() {
             </ul>
         </nav>
     );
+    
 }

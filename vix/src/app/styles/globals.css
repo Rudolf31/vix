@@ -46,6 +46,7 @@ li {
 header {
   background-image: url("../../../public/header.svg");
   min-height: 138px;
+  margin-top: 20px;
 } 
 
 
@@ -71,4 +72,13 @@ input::-webkit-inner-spin-button {
   height: 100%;
   width: 100%;
   background-size: 100% auto;
+}
+
+@media (max-width: 950px) { 
+  header {
+    background: #1A1A18;
+    min-height: 50px;
+    margin-top: 0px;
+  } 
+
 }
