@@ -5,17 +5,31 @@ import PopUpAuth from "./components/pop_up_auth.js";
 import useThemeStore from "../stores/theme_store.js";
 import useWindowWidthStore from "@/stores/window_width_store.js"; // Исправленный импорт
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function RootLayout({ children }) {
-const { isDarkMode, setDarkModeTrue, setDarkModeFalse } = useThemeStore((state) => state);
-const { windowWidth } = useWindowWidthStore((state) => (state));
+  const { isDarkMode, setDarkModeTrue, setDarkModeFalse } = useThemeStore((state) => state);
+  const { windowWidth, setWindowWidth } = useWindowWidthStore((state) => (state));
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [setWindowWidth]); // добавляем зависимость от setWindowWidth
+
 
   return (
     <html lang="ru">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="use-credentials"/>
         <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet"/>
+          <title></title>
       </head>
       <body className={isDarkMode ? "" : "body_white"}>
         <header>

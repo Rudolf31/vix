@@ -14,7 +14,8 @@ import "./../styles/navigation.css";
 export default function Navigation() {
     const pathname = usePathname();
     const [currentPath, setCurrentPath] = useState(pathname);
-    const { userAuth } = useAuthStore((state) => state);
+    const { userAuth, setUserAuth } = useAuthStore((state) => state);
+    const { closeAuth } = useAuthStore((state) => state);
     const { isDarkMode, setDarkModeTrue, setDarkModeFalse } = useThemeStore((state) => state);
     const { openPopUpAuth } = usePopUpStore((state) => state);
     const { windowWidth, setWindowWidth } = useWindowWidthStore((state) => ({
@@ -40,11 +41,30 @@ export default function Navigation() {
     useEffect(() => {
         setCurrentPath(pathname);
         console.log("Current Path:", pathname); 
-    }, [pathname]); 
+    }, [pathname]);
+
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            fetch("http://localhost:8080/api/user/isTokenValid", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + localStorage.getItem("token")
+                }
+            }).then((response) => {
+                if (!response.ok) {
+                    localStorage.removeItem("token");
+                    closeAuth();
+                } else {
+                    setUserAuth();
+                }
+            });
+        }
+    }, [])
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    console.log(userAuth)
 
     return (
         <nav className="text-2xl font-bold pt-7 text-white">
